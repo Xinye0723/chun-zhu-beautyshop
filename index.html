@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>君竹麗人美容院</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">君竹麗人</div>
+        <div class="menu-toggle">☰</div>
+        <ul class="nav-links">
+          <li><a href="#home">首頁</a></li>
+          <li><a href="#services">服務項目</a></li>
+          <li><a href="#price-list">價目表</a></li>
+          <li><a href="#location">門市位置</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <h1>君竹麗人美容院</h1>
+        <p>專業的美容服務，讓您展現最美的一面</p>
+        <a href="#location" class="cta-button">立即預約</a>
+      </section>
+
+      <section id="services" class="services">
+        <h2>我們的服務</h2>
+        <div class="service-grid">
+          <div class="service-card">
+            <h3>瑤浴</h3>
+            <p>草藥成分，熱俗療法，舒緩壓力</p>
+          </div>
+          <div class="service-card">
+            <h3>艾蒸</h3>
+            <p>天然材料，提升免疫，放鬆身心</p>
+          </div>
+          <div class="service-card">
+            <h3>足湯</h3>
+            <p>驅寒除濕，改善疲勞，調理身體</p>
+          </div>
+          <div class="service-card">
+            <h3>美顏紓壓</h3>
+            <p>肌膚護理，保濕修護，內外調理</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="price-list" class="price-list">
+        <h2>服務價目表</h2>
+        <div class="price-grid">
+          <div class="price-card">
+            <h3>進階護理</h3>
+            <ul>
+              <li>
+                臉部保養課程 <span>原價NT$ 1380</span><span>會員NT$ 1080</span>
+              </li>
+              <li>美人湯 <span>原價NT$ 1780</span><span>會員NT$ 1380</span></li>
+              <li>
+                出水芙蓉 <span>原價NT$ 2980</span><span>會員NT$ 2580</span>
+              </li>
+              <li>
+                VSP坐蒸 <span>原價NT$ 1980</span><span>會員NT$ 1580</span>
+              </li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <h3>基礎護理</h3>
+            <ul>
+              <li>頭部脖子保養 <span>30分鐘</span><span>NT$ 880</span></li>
+              <li>手臂、腿部 <span>30分鐘</span><span>NT$ 880</span></li>
+              <li>前鎖骨疏通 <span>30分鐘</span><span>NT$ 880</span></li>
+              <li>胸部淋巴疏通 <span>30分鐘</span><span>NT$ 880</span></li>
+              <li>腹部保養 <span>30分鐘</span><span>NT$ 880</span></li>
+              <li>臀部紓壓 <span>30分鐘</span><span>NT$ 880</span></li>
+              <li>背部紓壓 <span>30分鐘</span><span>NT$ 880</span></li>
+              <li>股溝疏通 <span>30分鐘</span><span>NT$ 880</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="location" class="location">
+      <h2>門市位置</h2>
+      <div class="contact-grid">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.3444739211054!2d121.5563506761621!3d24.98840827784599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab82456828bf%3A0xd56a75c3ca16be71!2z5ZCb56u56bqX5Lq6576O5a65576O6auU!5e0!3m2!1szh-TW!2stw!4v1734326736812!5m2!1szh-TW!2stw"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="qrcode-container">
+          <h3>加入好友，馬上預約</h3>
+          <img src="qrcode.png" alt="LINE QR Code" class="qrcode-image" />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="contact-info">
+          <h3>聯絡我們</h3>
+          <p>電話：(02) 8661-0270</p>
+          <p>地址：116台北市文山區木柵路二段54巷2號1樓</p>
+        </div>
+        <div class="business-hours">
+          <h3>營業時間</h3>
+          <p>週二至週日：10:30 - 21:30</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-links").classList.toggle("active");
+        });
+
+      // 點擊選單項目後自動關閉選單
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", function () {
+          document.querySelector(".nav-links").classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
